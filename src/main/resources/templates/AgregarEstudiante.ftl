@@ -13,22 +13,22 @@
 
             <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" class="form-control " name="nombre" id="nombre" placeholder="Nombre" required>
+                <input type="text" class="form-control"  id="nombre" name="nombre" placeholder="Nombre" required>
             </div>
 
             <div class="form-group">
                 <label for="apellido">Apellido</label>
-                <input type="text" class="form-control " id="apellido" name="apellido" placeholder="Apellido" required>
+                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required>
             </div>
 
             <div class="form-group">
                 <label for="matricula">Matricula</label>
-                <input type="text" class="form-control " id="matricula" name="matricula" placeholder="Matricula" required>
+                <input type="text" class="form-control" id="matricula" name="matricula" placeholder="Matricula" required>
             </div>
 
             <div class="form-group">
                 <label for="telefono">Telefono</label>
-                <input type="text" class="form-control " id="telefono" name="telefono" placeholder="Telefono" required>
+                <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" required>
             </div>
 
             <input type="submit" class="btn btn-primary" value="Agregar">

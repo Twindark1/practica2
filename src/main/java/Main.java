@@ -8,14 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 import spark.Spark;
-import static spark.Spark.staticFileLocation;
 import static spark.Spark.staticFiles;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.Version;
-
-import javax.annotation.Resource;
 
 public class Main {
 
@@ -69,12 +66,11 @@ public class Main {
         Spark.get("/ModificarEstudiante/:id", (request, response) -> {
             Template resultTemplate = configuration.getTemplate("templates/ModificarEstudiante.ftl");
             StringWriter writer = new StringWriter();
-            int id=Integer.parseInt(request.params("id"));
+
+            int id = Integer.parseInt(request.params("id"));
 
             Map<String, Object> attributes = new HashMap<>();
-
             attributes.put("Student", StudentList.get(id));
-            attributes.put("id", id);
 
             resultTemplate.process(attributes, writer);
             return writer;
@@ -116,6 +112,7 @@ public class Main {
                         x.setApellido(e.getApellido());
                         x.setMatricula(e.getMatricula());
                         x.setTelefono(e.getTelefono());
+                        break;
                     }
                 }
                 response.redirect("/Pucmm");
@@ -124,7 +121,6 @@ public class Main {
                 response.redirect("/Pucmm");
 
             }
-
             return writer;
         });
     }

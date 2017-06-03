@@ -13,27 +13,25 @@
 
             <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" name="nombre" id="nombre" value="${Student.nombre}/>
+                <input type="text" class="form-control" id="nombre" name="nombre"  placeholder="nombre" value="${Student.nombre}" required>
             </div>
 
             <div class="form-group">
                 <label for="apellido">Apellido</label>
-                <input type="text" class="form-control"  id="apellido" name="apellido" value="${Student.apellido}/>
+                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="apellido" value="${Student.apellido}" required>
             </div>
 
             <div class="form-group">
                 <label for="matricula">Matricula</label>
-                <input type="text" class="form-control"  id="matricula" name="matricula" value="${Student.matricula}/>
+                <input type="text" class="form-control" id="matricula" name="matricula" placeholder="matricula" value="${Student.matricula?string["0"]}" required>
             </div>
 
             <div class="form-group">
                 <label for="telefono">Telefono</label>
-                <input type="text" class="form-control"  id="telefono" name="telefono" value="${Student.telefono}/>
+                <input type="text" class="form-control" id="telefono" name="telefono" placeholder="telefono" value="${Student.telefono}" required>
             </div>
 
-                <input type="hidden">
-                <input type="submit" class="btn btn-primary" value="Agregar">
-
+            <input type="submit" class="btn btn-primary" value="Agregar">
 
         </form>
     </div>

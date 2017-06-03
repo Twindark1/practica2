@@ -61,7 +61,7 @@
                     <#assign cont = 0>  <#-- create variable x -->
 
                     <#list StudentList as Student>
-                    <tr class="animated fadeInDown">
+                    <tr class="animated fadeInUp">
                         <td>${Student.nombre}</td>
                         <td>${Student.apellido}</td>
                         <td>${Student.matricula?string["0"]}</td>
