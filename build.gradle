@@ -22,8 +22,12 @@ dependencies {
     compile "com.sparkjava:spark-template-freemarker:2.5.5"
     compile group: 'org.slf4j',name: 'slf4j-simple', version: '1.7.21'
     compile "com.heroku.adk:heroku-jdbc:0.1.1"
+    // https://mvnrepository.com/artifact/com.heroku.sdk/heroku-jdbc
+    compile group: 'com.heroku.sdk', name: 'heroku-jdbc', version: '0.1.0'
+
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
 
 defaultTasks = ['clean']
 task stage (dependsOn:['clean','installApp'])
