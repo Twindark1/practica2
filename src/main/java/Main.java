@@ -9,6 +9,7 @@ import java.util.Map;
 
 import spark.Spark;
 
+import static spark.Spark.get;
 import static spark.Spark.port;
 import static spark.Spark.staticFiles;
 
@@ -22,6 +23,8 @@ public class Main {
 
         //staticFiles.location("/public"); // Static files
 
+        int a = getHerokuAssignedPort();
+        System.out.println(a);
         port(getHerokuAssignedPort());
 
         final Configuration configuration = new Configuration(new Version(2, 3, 0));
