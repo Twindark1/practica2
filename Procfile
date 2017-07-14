@@ -1,1 +1,1 @@
-web: build/install/sparkjava-heroku/bin/sparkjava-heroku
+web: build/install/practica7-v2/bin/practica7-v2
