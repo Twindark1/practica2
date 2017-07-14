@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="practica2_main" target="1.8" />
       <module name="practica2_test" target="1.8" />
+      <module name="Practica7_main" target="1.8" />
+      <module name="Practica7_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

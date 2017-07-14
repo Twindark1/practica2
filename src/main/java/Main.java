@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import spark.Spark;
+
+import static spark.Spark.port;
 import static spark.Spark.staticFiles;
 
 import freemarker.template.Configuration;
@@ -18,7 +20,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        staticFiles.location("/public"); // Static files
+        //staticFiles.location("/public"); // Static files
+
+        port(getHerokuAssignedPort());
 
         final Configuration configuration = new Configuration(new Version(2, 3, 0));
         configuration.setClassForTemplateLoading(Main.class, "/");
@@ -123,5 +127,13 @@ public class Main {
             }
             return writer;
         });
+    }
+
+    private static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 }
